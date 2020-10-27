@@ -18,7 +18,7 @@ const eqArrays = (arr1, arr2) => {
   } else {
     return false;
   }
-}
+};
 
 
 // console.log(eqArrays([1, 2, 3], [1, 2, 3])) // => true

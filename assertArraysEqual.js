@@ -19,7 +19,7 @@ const eqArrays = (arr1, arr2) => {
   } else {
     return false;
   }
-}
+};
 
 
 // TEST CASES

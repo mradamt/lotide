@@ -9,7 +9,6 @@ const without = (source, itemsToRemove) => {
         break;
       }
     }
-
     if (!found) {
       out.push(s);
     }

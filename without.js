@@ -30,15 +30,14 @@ const eqArrays = (arr1, arr2) => {
   let len = arr1.length;
   if (len !== arr2.length) {
     return false;
-  } else {
-    for (let i = 0; i < len; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }  
+  } 
+  for (let i = 0; i < len; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
     }
   }
   return true; 
-};  
+};
 
 // console.log(without([1, 2, 3], [1])); // => [2, 3]
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]) // Pass

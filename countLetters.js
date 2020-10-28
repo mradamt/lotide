@@ -8,8 +8,8 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const countLetters = function (string) {
-  result = {};
+const countLetters = function(string) {
+  const result = {};
   const noSpaces = string.split(" ").join("");
   for (const char of noSpaces) {
     if (result[char]) {
@@ -18,11 +18,11 @@ const countLetters = function (string) {
       result[char] = 1;
     }
   }
-  return result
-}
+  return result;
+};
 
 // Test functions
 // console.log(countLetters("lighthouse in the house"))
-assertEqual(countLetters("lighthouse in the house")["h"], 4)
-assertEqual(countLetters("lighthouse in the house").s, 2)
-assertEqual(countLetters("lighthouse in the house").e, 3)
+assertEqual(countLetters("lighthouse in the house")["h"], 4);
+assertEqual(countLetters("lighthouse in the house").s, 2);
+assertEqual(countLetters("lighthouse in the house").e, 3);

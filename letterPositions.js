@@ -1,4 +1,4 @@
-// Helper functions 
+// Helper functions
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
@@ -32,7 +32,7 @@ const letterPositions = function(string) {
       result[noSpaces[i]] = [i];
     }
   }
-  return result
+  return result;
 };
 
 

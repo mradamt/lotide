@@ -1,22 +1,3 @@
-// ... is there a way to make this function cleaner??
-const without = (source, itemsToRemove) => {
-  const out = [];
-  for (const s of source) {
-    let found = false;
-    for (const i of itemsToRemove) {
-      if (s === i) {
-        found = true;
-        break;
-      }
-    }
-    if (!found) {
-      out.push(s);
-    }
-  }
-  return out;
-};
-
-
 // Helper functions to check output of main function is correct
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
@@ -39,12 +20,30 @@ const eqArrays = (arr1, arr2) => {
   return true; 
 };
 
+// Returns source array with specified items removed
+const without = (source, itemsToRemove) => {
+  const out = [];
+  for (const s of source) {
+    let found = false;
+    for (const i of itemsToRemove) {
+      if (s === i) {
+        found = true;
+        break;
+      }
+    }
+    if (!found) {
+      out.push(s);
+    }
+  }
+  return out;
+};
+
 // console.log(without([1, 2, 3], [1])); // => [2, 3]
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]) // Pass
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]) // Pass
 assertArraysEqual(without(["1", "2", "3"], []), ["1", "2", "3"]) // Pass
-assertArraysEqual(without(["foo", "bar"], ["baz"]), ["foo", "baz"]) // Fail
 assertArraysEqual(without([], ["baz"]), []) // Pass
+assertArraysEqual(without(["foo", "bar"], ["baz"]), ["foo", "baz"]) // Fail
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case

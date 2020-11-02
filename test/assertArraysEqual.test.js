@@ -10,7 +10,7 @@ assertArraysEqual([1, 2, "3"], [1, 2, "3"]); // pass
 assertArraysEqual([1, 2, 3], [1, 2, 4]); // fail
 
 
-// Assert Equal test cases... for future refactor maybe
+// JUST IN CASE OF REFACTOR::: Assert Equal test cases...
 // assertEqual(assertArraysEqual([1, 2, 3], [1, 2, 3]), true);
 // assertEqual(assertArraysEqual([1], [1]), true);
 // assertEqual(assertArraysEqual([], []), true);

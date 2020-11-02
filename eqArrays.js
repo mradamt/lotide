@@ -1,11 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
+// Returns true/false if two arrays are/are not identical
 const eqArrays = (arr1, arr2) => {
   let len = arr1.length;
   if (len !== arr2.length) {
@@ -20,10 +13,4 @@ const eqArrays = (arr1, arr2) => {
 };
 
 
-// console.log(eqArrays([1, 2, 3], [1, 2, 3])) // => true
-// console.log(eqArrays([1, 2, 3], [3, 2, 1])) // => false
-
-// console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
-// console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => false
-
-assertEqual(eqArrays([1, 2, 3, "ffo"], [1, 2, 3, "ffo"]), true); // => should PASS
+module.exports = eqArrays;

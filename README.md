@@ -27,7 +27,7 @@ This project was created and published by me as part of my learnings at Lighthou
 The following functions are currently implemented:
 
 * `countLetters(...)`: Returns a count of the letters of an input string
-* `countOnly(...)`: description TBD
+* `countOnly(...)`: Given an input list of items and an itemsToCount object with true/false values, will return a new object with the itemsToCount keys which were present in the input list, along with a count of how many times they occurred in that list.
 * `findKey(...)`: description TBD
 * `findKeyByValue(...)`: description TBD
 * `flatten(...)`: description TBD

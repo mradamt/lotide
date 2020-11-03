@@ -26,7 +26,7 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented:
 
-* `countLetters(...)`: description TBD
+* `countLetters(...)`: Returns a count of the letters of an input string
 * `countOnly(...)`: description TBD
 * `findKey(...)`: description TBD
 * `findKeyByValue(...)`: description TBD

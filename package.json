@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@mr.adamt/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A modular set of utility functions",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -14,7 +14,9 @@
     "url": "git+https://github.com/mradamt/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Adam Tyler"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mradamt/lotide/issues"

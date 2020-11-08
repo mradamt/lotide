@@ -3,22 +3,50 @@ const eqArrays = require('../eqArrays');
 
 describe("#eqArrays", () => {
   it("returns true for equal arrays of numbers)", () => {
-    assert.strictEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+    const a = [1, 2, 3];
+    const b = [1, 2, 3];
+    assert.strictEqual(eqArrays(a, b), true);
   });
   
   it("returns false for arrays with same data but different order))", () => {
-    assert.strictEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
+    const a = [1, 2, 3];
+    const b = [3, 2, 1];
+    assert.strictEqual(eqArrays(a, b), false);
   });
   
   it('returns true for equal arrays of strings)', () => {
-    assert.strictEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
+    const a = ["1", "2", "3"];
+    const b = ["1", "2", "3"];
+    assert.strictEqual(eqArrays(a, b), true);
   });
   
   it('returns false for arrays of equal implicit values but different data types)', () => {
-    assert.strictEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
+    const a = ["1", "2", "3"];
+    const b = ["1", "2", 3];
+    assert.strictEqual(eqArrays(a, b), false);
   });
   
   it('returns true for equal arrays with mixed data types)', () => {
-    assert.strictEqual(eqArrays([1, 2, 3, "ffo"], [1, 2, 3, "ffo"]), true);
+    const a = [1, 2, 3, "ffo"];
+    const b = [1, 2, 3, "ffo"];
+    assert.strictEqual(eqArrays(a, b), true);
+  });
+
+  it("returns true for equal arrays which include equal nested arrays)", () => {
+    const a = [[2, 3], [4]];
+    const b = [[2, 3], [4]];
+    assert.strictEqual((eqArrays(a, b)), true);
+  });
+
+  it("returns false for arrays which include unequal nested arrays)", () => {
+    const a = [[2, 3], [4]];
+    const b = [[2, 3], [4, 5]];
+    assert.strictEqual((eqArrays(a, b)), false);
+  });
+
+  it("returns false for arrays which include the same values but different nesting structures)", () => {
+    const a = [[2, 3], [4]];
+    const b = [[2, 3], 4];
+    assert.strictEqual((eqArrays(a, b)), false);
   });
 });

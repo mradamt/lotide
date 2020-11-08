@@ -6,7 +6,6 @@ const eqArrays = (arr1, arr2) => {
     return false;
   }
 
-  
   // Compare values of each array
   for (let i = 0; i < len; i++) {
     // Check if these two array elements are themselves each arrays

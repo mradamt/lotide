@@ -30,6 +30,12 @@ describe("#eqObjects", () => {
     assert.equal(eqObjects({ a: {y: { z: 1 }, v: {w: {x: 33}}}, b: 2 }, { a: {v: {w: {x: 33}}, y: { z: 1 }}, b: 2 }), true);
   }),
 
+  it('returns false for unequal objects that have several layers of equal objects as values, inequality at last key', () => {
+    const a = { a: {y: { z: 1 }, v: {w: {x: 33}}}, b: 2 };
+    const b = { a: {v: {w: {x: 33}}, y: { z: 1 }}, b: 3 }
+    assert.equal(eqObjects(a, b), false);
+  }),
+
   it('returns false for equal objects that have one layer of unequal objects as values', () => {
     assert.equal(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false);
   }),

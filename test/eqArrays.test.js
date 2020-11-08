@@ -37,6 +37,12 @@ describe("#eqArrays", () => {
     const b = [[2, 3], [4]];
     assert.strictEqual((eqArrays(a, b)), true);
   });
+  
+  it("returns true for equal arrays which include equal multiple nested arrays)", () => {
+    const b = [[2, 3], [4], [[[[[5, [6, [7]]]]]]]];
+    const a = [[2, 3], [4], [[[[[5, [6, [7]]]]]]]];
+    assert.strictEqual((eqArrays(a, b)), true);
+  });
 
   it("returns false for arrays which include unequal nested arrays)", () => {
     const a = [[2, 3], [4]];

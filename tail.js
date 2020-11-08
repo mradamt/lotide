@@ -15,7 +15,7 @@ const tail = (_array) => {
   return output;
 };
 
-module.exports = tail
+module.exports = tail;
 
 // const assertEqual = require('../assertEqual')
 // const tail = require('../tail')

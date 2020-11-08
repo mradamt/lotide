@@ -13,18 +13,18 @@ const itemsToCount = {
 
 describe("#countOnly", () => {
   it('returns 1 for countOnly(firstNames, itemsToCount).Jason', () => {
-    assert.equal(countOnly(firstNames, itemsToCount).Jason, 1)
+    assert.equal(countOnly(firstNames, itemsToCount).Jason, 1);
   }),
 
   it('returns undefined for countOnly(firstNames, itemsToCount).Karima', () => {
-    assert.equal(countOnly(firstNames, itemsToCount).Karima, undefined)
+    assert.equal(countOnly(firstNames, itemsToCount).Karima, undefined);
   }),
 
   it('returns 2 for countOnly(firstNames, itemsToCount).Fang', () => {
-    assert.equal(countOnly(firstNames, itemsToCount).Fang, 2)
+    assert.equal(countOnly(firstNames, itemsToCount).Fang, 2);
   }),
 
   it('returns undefined for countOnly(firstNames, itemsToCount).Agouhanna', () => {
-    assert.equal(countOnly(firstNames, itemsToCount).Agouhanna, undefined)
-  })  
-})
+    assert.equal(countOnly(firstNames, itemsToCount).Agouhanna, undefined);
+  });
+});

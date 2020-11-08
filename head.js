@@ -3,4 +3,4 @@ const head = (_array) => {
   return _array[0];
 };
 
-module.exports = head
+module.exports = head;

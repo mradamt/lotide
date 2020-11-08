@@ -8,8 +8,8 @@ const assertEqual = function(actual, expected) {
 };
 
 
-/* Takes in an object and a callback. It should scan the object and return 
- * the first key for which the callback returns a truthy value. If no key 
+/* Takes in an object and a callback. It should scan the object and return
+ * the first key for which the callback returns a truthy value. If no key
  * is found, then it should return undefined. */
 const findKey = (obj, callback) => {
   for (const [key, value] of Object.entries(obj)) {
@@ -29,9 +29,9 @@ const testArray = {
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
-}
+};
 
-const result = findKey(testArray, x => x.stars === 2) // => "noma"
+const result = findKey(testArray, x => x.stars === 2); // => "noma"
 
-assertEqual(findKey(testArray, x => x.stars === 2), "noma")
-assertEqual(findKey(testArray, x => x.stars === 3), "Akaleri")
+assertEqual(findKey(testArray, x => x.stars === 2), "noma");
+assertEqual(findKey(testArray, x => x.stars === 3), "Akaleri");

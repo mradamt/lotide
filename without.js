@@ -4,20 +4,20 @@ const assertArraysEqual = function(actual, expected) {
     console.log(`🟢 Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`🔴 Assertion Failed: ${actual} !== ${expected}`);
-  }  
-};  
+  }
+};
 
 const eqArrays = (arr1, arr2) => {
   let len = arr1.length;
   if (len !== arr2.length) {
     return false;
-  } 
+  }
   for (let i = 0; i < len; i++) {
     if (arr1[i] !== arr2[i]) {
       return false;
     }
   }
-  return true; 
+  return true;
 };
 
 // Returns source array with specified items removed
@@ -39,11 +39,11 @@ const without = (source, itemsToRemove) => {
 };
 
 // console.log(without([1, 2, 3], [1])); // => [2, 3]
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]) // Pass
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]) // Pass
-assertArraysEqual(without(["1", "2", "3"], []), ["1", "2", "3"]) // Pass
-assertArraysEqual(without([], ["baz"]), []) // Pass
-assertArraysEqual(without(["foo", "bar"], ["baz"]), ["foo", "baz"]) // Fail
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // Pass
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // Pass
+assertArraysEqual(without(["1", "2", "3"], []), ["1", "2", "3"]); // Pass
+assertArraysEqual(without([], ["baz"]), []); // Pass
+assertArraysEqual(without(["foo", "bar"], ["baz"]), ["foo", "baz"]); // Fail
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case

@@ -20,5 +20,5 @@ describe("#eqObjects", () => {
 
   it('returns false for ({ c: "1", d: ["2", 3, 4] }, { c: "1", d: 1 })', () => {
     assert.strictEqual(eqObjects({ c: "1", d: ["2", 3, 4] }, { c: "1", d: 1 }), false);
-  })
+  });
 });
